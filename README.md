@@ -9,6 +9,8 @@ My plan was to do a case study to test could lexicon-based sentiment analysis be
 -	What sentiments are most common in the wall inscriptions of Casa delle Nozze d'Argento?
 -	Do the sentiments of the wall inscriptions of Casa delle Nozze d'Argento and their location correlate to each other? Are there specific places where specific sentiments are located?
 
+![lohmann_cdnda](https://github.com/lisja/LDA-H305/assets/93824007/af9c30d8-992d-4718-82ee-3588e4135663)
+
 # Background
 There has been quite a lot of research about the wall inscriptions of Pompeii. The most central studies considering this project are Polly Lohmann’s book _Graffiti als Interaktionsform: Geritzte Inschriften in den Wohnhäusern Pompejis_ (2018) and Joonas Vanhala’s Master’s thesis titled _Imanis metula es : herjaukset Pompejin seinäkirjoituksissa_ (2019). Lohmann’s book analyses the wall inscriptions as an everyday form of interaction and focuses on the wall inscriptions of six Pompeian houses. One of these is the topic of this project: Casa delle Nozze d'Argento. In his study Vanhala focuses on the invectives found in the wall inscriptions of Pompeii and he also has listed invective wall inscriptions of Casa delle Nozze d'Argento. This is one of the reasons why I chose this specific house as the topic of my case study. Both Vanhala and Lohmann have listed the wall inscriptions found in the house in question and I used these lists as the basis of my dataset. 
 
@@ -36,6 +38,7 @@ The data gathered can be viewed by downloading the _cdnda_graffiti.xlsx_ file. T
 
 For translation of the wall inscriptions from Latin to English I used _philolog.us_ (https://philolog.us/) as well as the database by Rose (2018) that has translations on some of the wall inscriptions found in Casa delle Nozze d'Argento. 
 
+
 # The Process
 
 First, I manually collected the wall inscriptions of Casa delle Nozze d'Argento listed in both Vanhala’s and Lohmann’s studies and saved them to the file _cdnda_graffiti.xlsx_’s sheet named _Lohmann_Vanhala_. There were total of 80 inscriptions listed in Lohmann’s book and 10 invectives listed in Vanhala’s thesis. One of the invectives listed by Vanhala was not found in Lohmann’s listing (CIL IV 4195) so I added this to the dataset. Also, there was a difference in interpretation of the wall inscription CIL IV 4196 (“Meroe” vs. “Miduse”). I ended up using the version by Vanhala (“Meroe”) because his thesis is more recent, and he had added explanations of his interpretation of the wall inscription. There is also a difference in the interpretation of the wall inscription CIL IV 4160: Vanhala lists 3 different possibilities and I have added all of these possibilities in the dataset since there are clear differences in their sentiments. I didn’t add the wall inscriptions to the datasets that were not in Latin or were only Roman numerals and thus would not add anything to the data. I also deleted the totally incomprehensible wall inscriptions completely and deleted the incomprehensible parts of some inscriptions for the same reason. Eventually the total amount of the wall inscriptions in the dataset was set to 51, containing the 3 different interpretations of the wall inscription CIL IV 4160. 
@@ -52,10 +55,34 @@ I wanted to visualize the results so I used _Palladio_ (https://hdlab.stanford.e
 
 # Results and analysis
 
+<div align="center">The distribution of the wall inscriptions of Casa delle Nozze d'Argento: in numbers and in percentage</div>
+
+<img src="https://github.com/lisja/LDA-H305/assets/93824007/09f867e4-d5d4-4b57-ad99-8fef5e59ba1a" width="500" height="300">
+
 ![sentiments_amount_donut](https://github.com/lisja/LDA-H305/assets/93824007/09f867e4-d5d4-4b57-ad99-8fef5e59ba1a)
-->*The total number of the wall inscriptions*<-
 
 ![sentiments_donut](https://github.com/lisja/LDA-H305/assets/93824007/ea7cb0b7-08d4-4f87-b5e8-4a98f8d2a3a4)
 
+![cil_and_sentiment_polarity](https://github.com/lisja/LDA-H305/assets/93824007/1f6de594-672e-4d0c-8daf-2ef443f4d3ee)
+
 
 ![location_and_sentiments](https://github.com/lisja/LDA-H305/assets/93824007/f7842371-7631-4f0f-8c28-748c4c17f040)
+
+# Problems, biases, and alternative solutions
+
+# About the reproducibility of the results
+
+# References
+
+Lohmann, P. (2018) Graffiti als Interaktionsform: Geritzte Inschriften in den Wohnhäusern Pompejis, Berlin, Boston: De Gruyter, 2018. https://doi.org/10.1515/9783110574289
+
+Rose, A. (2018) Database for The Scratched Voices Begging to be Heard: The Graffiti of Pompeii and Today. Tempe, AZ: Barrett, the Honors College. 2018 ( tDAR id: 445837) ; https://doi.org/10.6067/XCV8TH8QJ5 
+
+Sprugnoli, Rachele; Passarotti, Marco; Corbetta, Daniela and Peverelli, Andrea. (2020). LatinAffectus, ILC-CNR for CLARIN-IT repository hosted at Institute for Computational Linguistics "A. Zampolli", National Research Council, in Pisa. http://hdl.handle.net/20.500.11752/OPEN-527
+
+Sprugnoli, R., Passarotti, M. C., Testori, M., Moretti, G. (2021). Extending and Using a Sentiment Lexicon for Latin in a Linked Data Framework, in Proceedings of the Workshops and Tutorials - Language Data and Knowledge 2021 (LDK 2021). Zaragoza, Spain, September 1-4, CEUR Workshop Proceedings, 2021, (Zaragoza, 01-01 September 2021), CEUR Workshop Proceedings (CEUR-WS.org), Zaragoza 2021: 151-164. [10.5281/zenodo.6303164] [http://hdl.handle.net/10807/196024]
+
+Sprugnoli, R., Mambrini, F., Passarotti, M. C., & Moretti, G. (2023). The Sentiment of Latin Poetry. Annotation and Automatic Analysis of the Odes of Horace. IJCOL, 9, 53-71.
+
+Vanhala, J. (2019). Imanis metula es : herjaukset Pompejin seinäkirjoituksissa. [Master’s thesis, University of Turku]
+
