@@ -2,14 +2,18 @@
 
 This is my final project for the course "Computational Literacy". The topic of this project is **the sentiment analysis of the wall inscriptions found in Casa delle Nozze d'Argento**, a house in the ancient city of Pompeii. 
 
-My plan was to do a case study to test could lexicon-based sentiment analysis be used to analyse the wall inscriptions, and what the results can tell us.
+My plan was to do a case study to test could lexicon-based sentiment analysis be used to analyse the wall inscriptions, and what the results can tell us. I chose Casa delle Nozze d'Argento since it has a good number of wall inscriptions but and especially because some of them are considered invectives which I already know to be negative in their sentiment. I will use this information to test that the invectives are detected correctly.
 
 **The research questions of this project were:**
 -	Can sentiment analysis be used in the context of ancient wall inscriptions and the Latin language?
 -	What sentiments are most common in the wall inscriptions of Casa delle Nozze d'Argento?
 -	Do the sentiments of the wall inscriptions of Casa delle Nozze d'Argento and their location correlate to each other? Are there specific places where specific sentiments are located?
 
-![lohmann_cdnda](https://github.com/lisja/LDA-H305/assets/93824007/af9c30d8-992d-4718-82ee-3588e4135663)
+![cdnda_pic](https://github.com/lisja/LDA-H305/assets/93824007/5a639190-3088-4488-ac11-b3c7d240f89c)
+
+
+###### <div align="center">A picture from Casa delle Nozze d'Argento (Photograph © Parco Archeologico di Pompei.)</div>
+
 
 # Background
 There has been quite a lot of research about the wall inscriptions of Pompeii. The most central studies considering this project are Polly Lohmann’s book _Graffiti als Interaktionsform: Geritzte Inschriften in den Wohnhäusern Pompejis_ (2018) and Joonas Vanhala’s Master’s thesis titled _Imanis metula es : herjaukset Pompejin seinäkirjoituksissa_ (2019). Lohmann’s book analyses the wall inscriptions as an everyday form of interaction and focuses on the wall inscriptions of six Pompeian houses. One of these is the topic of this project: Casa delle Nozze d'Argento. In his study Vanhala focuses on the invectives found in the wall inscriptions of Pompeii and he also has listed invective wall inscriptions of Casa delle Nozze d'Argento. This is one of the reasons why I chose this specific house as the topic of my case study. Both Vanhala and Lohmann have listed the wall inscriptions found in the house in question and I used these lists as the basis of my dataset. 
@@ -20,7 +24,7 @@ Even though the wall inscriptions of Pompeii have been studied quite extensively
 As mentioned above I used the listing of wall inscriptions of Casa delle Nozze d'Argento found both in Vanhala’s and Lohmann’s studies, 51 inscriptions in total. I also used the wall inscriptions listed by Vanhala because their sentiment polarity is already known to be negative since they are recognised as invectives. I wanted to test if they are detected correctly as such in the analysis. 
 
 The data gathered can be viewed by downloading the _cdnda_graffiti.xlsx_ file. There are 3 sheets: 
--	**Lohmann_Vanhala**:
+-	**Lohmann_Vanhala**
     -	The graffiti from Casa delle Nozze d'Argento in Pompeii, gathered from the works of Lohmann and Vanhala
     - A guide to read the cells:
       - **CIL IV:** number assigned to each wall inscription in _Corpus Inscriptionum Latinarum_, a collection of Latin inscriptions.
@@ -51,38 +55,68 @@ I used _LatinAffectus_, a set of sentiment lexicons of Latin adjectives and noun
 
 I wrote the Python code to do the sentiment analysis on the dataset. The code and the instructions to use it can be found in the file _manual_latinaffectus_sentiments.py_. The lemmatized wall inscriptions need to be inputted manually and then the program prints the tokens of the input, the sentiment polarity, and the sentiment score as the output. I manually placed each of the lemmatized wall inscriptions to the code and saved the sentiment polarity and sentiment score to the file _cdnda_graffiti.xlsx_’s sheet named _Sentiments_. 
  
-I wanted to visualize the results so I used _Palladio_ (https://hdlab.stanford.edu/palladio/) to create some graphs that can be seen below in the **Results and analysis** section. I also made some donut graphs (using https://graphmaker.imageonline.co/donutchart.php) to visualize the distribution of the sentiment which can also be seen below. 
+I wanted to visualize the results so I used _Palladio_ (https://hdlab.stanford.edu/palladio/) to create some graphs that can be seen below in the **Results and analysis** section. I used _OpenRefine_ (https://openrefine.org/) to clean the dataset a bit to delete empty rows that I had added to the dataset to make it more reader friendly. I also converted the dataset to .csv file because that is necessary for Palladio to work. I also made some donut graphs (using https://graphmaker.imageonline.co/donutchart.php) to visualize the distribution of the sentiment which can also be seen below. 
 
 # Results and analysis
 
-<div align="center">The distribution of the wall inscriptions of Casa delle Nozze d'Argento: in numbers and in percentage</div>
+The results of the sentiment analysis shows that it can indeed be used in the context of the ancient wall inscriptions. However, it does require quite a lot of effort because there is still a lot of work to be done to get the methods and tools for this kind of research to work. The only proper sentiment lexicon at this time is _LatinAffectus_ that contains a bit over 6 000 Latin adjectives and nouns. However, it does not contain any verbs and the 6 000 words it has ended up not being enough and thus I had to add some myself. 
 
-<img src="https://github.com/lisja/LDA-H305/assets/93824007/09f867e4-d5d4-4b57-ad99-8fef5e59ba1a" width="500" height="300">
+A bit surprisingly, when summed up together the total sentiment score of all of the wall inscriptions was 0,5 and the sentiment polarity was positive. I assumed that the neutral sentiments would be dominant because many of the words in the wall inscriptions were not in LatinAffectus but my first intuition was that the sentiments would be more in the negative direction. 
 
-![sentiments_amount_donut](https://github.com/lisja/LDA-H305/assets/93824007/09f867e4-d5d4-4b57-ad99-8fef5e59ba1a)
+The distribution of the sentiments was as such: from the total 51 of the wall inscriptions in the dataset 24 (47.1 %) were recognized as neutral, 14 (27.5 %) as positive and 13 (25.5 %) as negative. These results can also be viewed in the donut graphs below.
 
-![sentiments_donut](https://github.com/lisja/LDA-H305/assets/93824007/ea7cb0b7-08d4-4f87-b5e8-4a98f8d2a3a4)
+&nbsp;
+&nbsp;
 
-![cil_and_sentiment_polarity](https://github.com/lisja/LDA-H305/assets/93824007/1f6de594-672e-4d0c-8daf-2ef443f4d3ee)
+### **<div align="center">The donut graphs for the distribution of the wall inscriptions of Casa delle Nozze d'Argento (total amount 51 wall inscriptions):</div>**
+
+<div align="center"><img src="https://github.com/lisja/LDA-H305/assets/93824007/09f867e4-d5d4-4b57-ad99-8fef5e59ba1a" width="600" height="350"></div>
+
+<div align="center"><img src="https://github.com/lisja/LDA-H305/assets/93824007/ea7cb0b7-08d4-4f87-b5e8-4a98f8d2a3a4" width="600" height="350"></div>
+
+&nbsp;
+&nbsp;
+
+The sentiment scores were between -1.5 and 3.5, most of the scores being neutral (0). There is one wall inscription (4160) that is both neutral (0) and negative (-1). This can be seen also in the graph below. The reason for this is mentioned above in the **The Process** section: the dataset had it 3 times because there were 3 different interpretations of the wall inscription. 2 of these interpretations were detected as negative and 1 as neutral. 
+
+### **<div align="center">The sentiment scores & the wall inscription marked with CIL IV number:</div>**
+
+<div align="center"><img src="https://github.com/lisja/LDA-H305/assets/93824007/1f6de594-672e-4d0c-8daf-2ef443f4d3ee" width="800" height="500"></div>
+
+&nbsp;
+&nbsp;
+
+About the locations of the wall inscriptions and the sentiments they describe there seems not to be a clear correlation as seen in the graph below. There is no specific location where a certain sentiment would appear especially often. This could indicate that the location didn’t play a big part of the decision where a person would write their negative or positive opinions about someone.  
+
+&nbsp;
+&nbsp;
+
+### **<div align="center">The sentiment polarity & the different locations of the wall inscriptions:</div>**
+
+<div align="center"><img src="https://github.com/lisja/LDA-H305/assets/93824007/5584a2c7-d301-4372-a598-ce4322f6f7f8" width="800" height="500"></div>
 
 
-![location_and_sentiments](https://github.com/lisja/LDA-H305/assets/93824007/f7842371-7631-4f0f-8c28-748c4c17f040)
+<div align="center"><img src="https://github.com/lisja/LDA-H305/assets/93824007/af9c30d8-992d-4718-82ee-3588e4135663"></div>
 
-# Problems, biases, and alternative solutions
+###### <div align="center">The layout of Casa delle Nozze d'Argento with the wall inscriptions numbered (Lohmann, 2018)</div>
+
+
+# Problems, biases & alternative solutions
+
 
 # About the reproducibility of the results
 
 # References
 
-Lohmann, P. (2018) Graffiti als Interaktionsform: Geritzte Inschriften in den Wohnhäusern Pompejis, Berlin, Boston: De Gruyter, 2018. https://doi.org/10.1515/9783110574289
+Lohmann, P. (2018) _Graffiti als Interaktionsform: Geritzte Inschriften in den Wohnhäusern Pompejis_, Berlin, Boston: De Gruyter, 2018. https://doi.org/10.1515/9783110574289
 
-Rose, A. (2018) Database for The Scratched Voices Begging to be Heard: The Graffiti of Pompeii and Today. Tempe, AZ: Barrett, the Honors College. 2018 ( tDAR id: 445837) ; https://doi.org/10.6067/XCV8TH8QJ5 
+Rose, A. (2018) _Database for The Scratched Voices Begging to be Heard: The Graffiti of Pompeii and Today._ Tempe, AZ: Barrett, the Honors College. 2018 ( tDAR id: 445837) ; https://doi.org/10.6067/XCV8TH8QJ5 
 
-Sprugnoli, Rachele; Passarotti, Marco; Corbetta, Daniela and Peverelli, Andrea. (2020). LatinAffectus, ILC-CNR for CLARIN-IT repository hosted at Institute for Computational Linguistics "A. Zampolli", National Research Council, in Pisa. http://hdl.handle.net/20.500.11752/OPEN-527
+Sprugnoli, Rachele; Passarotti, Marco; Corbetta, Daniela and Peverelli, Andrea. (2020). _LatinAffectus_, ILC-CNR for CLARIN-IT repository hosted at Institute for Computational Linguistics "A. Zampolli", National Research Council, in Pisa. http://hdl.handle.net/20.500.11752/OPEN-527
 
-Sprugnoli, R., Passarotti, M. C., Testori, M., Moretti, G. (2021). Extending and Using a Sentiment Lexicon for Latin in a Linked Data Framework, in Proceedings of the Workshops and Tutorials - Language Data and Knowledge 2021 (LDK 2021). Zaragoza, Spain, September 1-4, CEUR Workshop Proceedings, 2021, (Zaragoza, 01-01 September 2021), CEUR Workshop Proceedings (CEUR-WS.org), Zaragoza 2021: 151-164. [10.5281/zenodo.6303164] [http://hdl.handle.net/10807/196024]
+Sprugnoli, R., Passarotti, M. C., Testori, M., Moretti, G. (2021). _Extending and Using a Sentiment Lexicon for Latin in a Linked Data Framework_, in Proceedings of the Workshops and Tutorials - Language Data and Knowledge 2021 (LDK 2021). Zaragoza, Spain, September 1-4, CEUR Workshop Proceedings, 2021, (Zaragoza, 01-01 September 2021), CEUR Workshop Proceedings (CEUR-WS.org), Zaragoza 2021: 151-164. [10.5281/zenodo.6303164] [http://hdl.handle.net/10807/196024]
 
-Sprugnoli, R., Mambrini, F., Passarotti, M. C., & Moretti, G. (2023). The Sentiment of Latin Poetry. Annotation and Automatic Analysis of the Odes of Horace. IJCOL, 9, 53-71.
+Sprugnoli, R., Mambrini, F., Passarotti, M. C., & Moretti, G. (2023). _The Sentiment of Latin Poetry. Annotation and Automatic Analysis of the Odes of Horace._ IJCOL, 9, 53-71.
 
-Vanhala, J. (2019). Imanis metula es : herjaukset Pompejin seinäkirjoituksissa. [Master’s thesis, University of Turku]
+Vanhala, J. (2019). _Imanis metula es : herjaukset Pompejin seinäkirjoituksissa._ [Master’s thesis, University of Turku]
 
