@@ -1,6 +1,6 @@
 # The code for the sentiment analysis using the LatinAffectus v.4 sentiment lexicon
 
-# HOW TO USE: add manually the lemmatized text in Latin in the latin_text variable. It will print the tokens as well as the sentiment polarity and the total sentiment score (from -1 to 1).
+# HOW TO USE: add manually the lemmatized text in Latin in the latin_text variable. It will print the tokens as well as the sentiment polarity and the total sentiment score.
 
 
 from cltk.tokenizers.lat.lat import LatinWordTokenizer
