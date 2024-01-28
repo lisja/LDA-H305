@@ -61,7 +61,11 @@ I wanted to visualize the results so I used _Palladio_ (https://hdlab.stanford.e
 
 # Results and analysis
 
-The results of the sentiment analysis shows that it can indeed be used in the context of the ancient wall inscriptions. However, it does require quite a lot of effort because there is still a lot of work to be done to get the methods and tools for this kind of research to work. The only proper sentiment lexicon at this time is _LatinAffectus_ that contains a bit over 6 000 Latin adjectives and nouns. However, it does not contain any verbs and the 6 000 words it has ended up not being enough and thus I had to add some myself. 
+The results of the sentiment analysis shows that it can indeed be used in the context of the ancient wall inscriptions. However, it does require quite a lot of effort because there is still a lot of work to be done to get the methods and tools for this kind of research to work. The only proper sentiment lexicon at this time is _LatinAffectus_ that contains a bit over 6 000 Latin adjectives and nouns. However, it does not contain any verbs and the 6 000 words it has ended up not being enough and thus I had to add some myself. These added words can be seen below. 
+
+### **<div align="center">The words added to _LatinAffectus_:</div>**
+
+
 
 A bit surprisingly, when summed up together the total sentiment score of all of the wall inscriptions was 0,5 and the sentiment polarity was positive. I assumed that the neutral sentiments would be dominant because many of the words in the wall inscriptions were not in LatinAffectus but my first intuition was that the sentiments would be more in the negative direction. 
 
