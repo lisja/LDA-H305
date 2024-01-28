@@ -2,7 +2,7 @@
 
 [![DOI](https://zenodo.org/badge/731136786.svg)](https://zenodo.org/doi/10.5281/zenodo.10395676)
 
-This is my final project for the course "Computational Literacy". The topic of this project is **the sentiment analysis of the wall inscriptions found in Casa delle Nozze d'Argento**, a house in the ancient city of Pompeii. 
+This is my final project for the course "Computational Literacy". The topic of this project is **the sentiment analysis of the wall inscriptions found in Casa delle Nozze d'Argento**, a house in the ancient city of Pompeii. It was lastly owned by Lucius Albucius Celsus, a member of the Pompeiian aristocracy. (Ormerod 2007) 
 
 My plan was to do a case study to test could lexicon-based sentiment analysis be used to analyse the wall inscriptions, and what the results can tell us. I chose Casa delle Nozze d'Argento since it has a good number of wall inscriptions but and especially because some of them are considered invectives which I already know to be negative in their sentiment. I will use this information to test that the invectives are detected correctly.
 
