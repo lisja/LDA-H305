@@ -61,15 +61,19 @@ I wanted to visualize the results so I used _Palladio_ (https://hdlab.stanford.e
 
 # Results and analysis
 
-The results of the sentiment analysis shows that it can indeed be used in the context of the ancient wall inscriptions. However, it does require quite a lot of effort because there is still a lot of work to be done to get the methods and tools for this kind of research to work. The only proper sentiment lexicon at this time is _LatinAffectus_ that contains a bit over 6 000 Latin adjectives and nouns. However, it does not contain any verbs and the 6 000 words it has ended up not being enough and thus I had to add some myself. These added words can be seen below. 
+The results of the sentiment analysis shows that it can indeed be used in the context of the ancient wall inscriptions. However, it does require quite a lot of effort because there is still a lot of work to be done to get the methods and tools for this kind of research to work. The only proper sentiment lexicon at this time is _LatinAffectus_ that contains a bit over 6 000 Latin adjectives and nouns. However, it does not contain any verbs and the 6 000 words it has, ended up not being enough and thus I had to add some myself. These added words can be seen below. 
 
 ### **<div align="center">The words added to _LatinAffectus_:</div>**
 
+<div align="center"><img src="https://github.com/lisja/LDA-H305/assets/93824007/ff41e310-b864-4d7e-89a8-7a19d7178de2"></div>
+
+&nbsp;
+&nbsp;
+
+A bit surprisingly, when summed up together, the total sentiment score of all of the wall inscriptions was 0,5 and the sentiment polarity was positive. I assumed that the neutral sentiments would be dominant because many of the words in the wall inscriptions were not in LatinAffectus but my first intuition was that the sentiments would be more in the negative direction.
 
 
-A bit surprisingly, when summed up together the total sentiment score of all of the wall inscriptions was 0,5 and the sentiment polarity was positive. I assumed that the neutral sentiments would be dominant because many of the words in the wall inscriptions were not in LatinAffectus but my first intuition was that the sentiments would be more in the negative direction. 
-
-The distribution of the sentiments was as such: from the total 51 of the wall inscriptions in the dataset 24 (47.1 %) were recognized as neutral, 14 (27.5 %) as positive and 13 (25.5 %) as negative. These results can also be viewed in the donut graphs below.
+The distribution of the sentiments was as such: from the total 51 of the wall inscriptions in the dataset 24 (47.1 %) were recognized as neutral, 14 (27.5 %) as positive and 13 (25.5 %) as negative. These results can also be viewed in the donut graphs below. It seems that the words that were found in _LatinAffectus_ were all detected correctly, as were also all of the invectives gathered from Vanhala’s work. The large amount of the neutral wall inscriptions can be explained partly by the fact that they were not in _LatinAffectus_ and thus they were automatically detected as neutral. If we would be able to add more words in _LatinAffectus_ the result might be different.
 
 &nbsp;
 &nbsp;
@@ -95,9 +99,8 @@ The sentiment scores were between -1.5 and 3.5, most of the scores being neutral
 &nbsp;
 &nbsp;
 
-About the locations of the wall inscriptions and the sentiments they describe there seems not to be a clear correlation as seen in the graph below. There is no specific location where a certain sentiment would appear especially often. This could indicate that the location didn’t play a big part of the decision where a person would write their negative or positive opinions about someone. However, the most popular place to scribble some wall inscriptions in general seemed to have been the **peristyle** of the house and then the **“Room y”** in the southern part of the building. I would like to point out that there is also mentioned one negative wall inscription as simply _“Peristyle”_. This is because that wall inscription was only mentioned in Vanhala’s listings where the locations were not mentioned as with so much detail than in Lohmann’s book. 
+Three locations can be distinguished from Casa delle nozze d'argento, where only positive or negative wall inscriptions were present, as can be seen from the figure below. Locations where only positive polarities occurred are the garden ("_Garden 05 Western wall_") and the _cubiculum_ ("_Room x Southern wall_"), both of which have one wall inscription. The garden wall inscription (CIL IV 4219) had a sentiment score of 1 and the _cubiculum_ wall inscription (CIL IV 4215) 0.5. In the _fauces_ corridor ("_Corridor p Western wall_") there is one wall inscription (CIL IV 4158). The sentiment polarity of this is negative and the sentiment score is -1. Since they are only individual wall inscriptions in each of the three locations, no greater generalization can be made based on them regarding the connection between location and emotional contents, but one can still think about the functions of these parts of the house to explain their selection as writing targets.
 
-&nbsp;
 &nbsp;
 
 ### **<div align="center">The sentiment polarity & the different locations of the wall inscriptions:</div>**
@@ -107,14 +110,51 @@ About the locations of the wall inscriptions and the sentiments they describe th
 &nbsp;
 &nbsp;
 
+In order to analyse the locations of the Casa delle nozze d'argento’s wall inscriptions in more detail, one must first focus on the Roman private house in general and its function and operation. Nissinen (2008) describes that a Roman private house was "the center of its owner's social, political and economic life". Unlike in modern times, the Roman private house was partly open to everyone and played an important role in highlighting the host's social status and wealth. (Ormerod 2007) Because private houses were constantly under observation and as objects of visits, the owners were invested in them and specifically wanted to present them to the public. (Simelius 2018)
 
-Most of the wall inscriptions in the dataset are located in the peristyle of Casa delle Nozze d'Argento, a covered porch consisting of rows of columns, and it typically surrounds a garden or central courtyard. The Casa delle Nozze d'Argento’s peristyle is the rectangular area in the middle of the house marked in the layout below with the letter **“r”**. Even though the house was a private house, most likely owned lastly by Lucius Albucius Celsus, a member of the aristocracy of Pompeii (http://pompeiisites.org/en/archaeological-site/house-of-the-silver-wedding), there would’ve been quite a lot of people inside the house walls. The ancient Roman society depended heavily on slaves, and they would’ve been an important part in running the household in such a big house as Casa delle Nozze d'Argento that would need multiple slaves to do different chores and duties. An important social structure in the ancient Roman society was **the Patronage**: a relationship between a high-ranking aristocrat called patron and his clients. The patron would give protection to the client and their family as well as help with other possible problems, such as giving legal advice and financial help, in exchange of different services, and most importantly, the loyalty of their clients. The clients would regularly visit their patron and such adding to the amount of people roaming around the house. There would’ve been also numerous other people such as family members, relatives and visiting friends. This can explain the wall inscriptions found **inside** Casa delle Nozze d'Argento and might suggest that the writers were either the habitants or invited visitors of the house spending time in the middle area of the house enjoying the garden surrounded by columns. This seems a bit contradictory to our modern idea that graffiti or wall inscriptions are done by outsiders often to the outer parts of the buildings. Considering this, I find it especially interesting and quite funny that someone wrote “Lucio Albucio fellatori” (“To Lucius Albucius cocksucker”) inside Lucius Albucius Celsus’ own house. This makes me ponder the identity of the writer: could it be an unhappy slave or a client that was not pleased with their patron? 
+Wallace-Hadrill (1994) divides the Roman house into different areas according to "grandeur" and accessibility. He also divides the users of the Roman private house into three different groups: the host family (_paterfamilia_), servants and slaves (_servi_), and friends. Wallace-Hadrill has in turn divided the friends into four different groups according to the closeness and the social hierarchy between them and the host family: _familiares_ (closest friends), _amici_ (friends), _clientes_ (clients) and _liberti_ (freed slaves). Only the family and the closest friends had access to the most luxurious and at the same time private parts of the house, while the public areas were often the humblest ones. 
+
+&nbsp;
+
+<div align="center"><img src="https://github.com/lisja/LDA-H305/assets/93824007/91611de4-8ac7-4a03-a395-ddff6ecc6d1e"></div>
+
+###### <div align="center">Wallace-Hadrill (1994) & division of the Roman house</div>
+
+The residents of the private house consisted of the family with their servants and slaves. Slaves were an extremely important part of the Roman Empire and without them the entire economic life of the empire would have collapsed. In a large house like Casa delle nozze d'argento, slaves were an important part of the household and everyday life, so logically they also spent time in almost all different parts of the house. (Wallace-Hadrill 1994)
+
+Guests were brought to the private house by the _salutatio_, a morning "greeting visit" related to the old traditions of Roman society. This is based on the hierarchical structure of Roman society and the _patronus_-client tradition that emerged from it. The members of the aristocracy acted as patrons of their lower-status clients and could give them gifts, such as money or goods, in return for example their clients' votes in elections. The relationship between the _patronus_ and the client was considered sacred, indicating its importance and esteem in Roman society. An important part of this tradition was the morning salutation, where the client visited his _patronus_ at his home. (Castren & Andrews 2008) This was a natural opportunity for the _patronus_ to showcase his house and thus his status and wealth. There is no exact information whether the salutation was also used in Pompeii because there was no population of the senatorial class, but considering how important and respected this tradition was in society, it is very possible that it or a similar custom was practiced in Pompeii as well. Besides the salutation and the open nature of the houses, there are other reasons why Roman private houses had many guests: parties and dinners and other social gatherings were held among friends. Both business and public affairs could also be handled in different parts of private houses. (Simelius 2018)
 
 
 <div align="center"><img src="https://github.com/lisja/LDA-H305/assets/93824007/af9c30d8-992d-4718-82ee-3588e4135663"></div>
 
 ###### <div align="center">The layout of Casa delle Nozze d'Argento with the wall inscriptions numbered (Lohmann, 2018)</div>
 
+&nbsp;
+
+As mentioned earlier there were three locations with a specific sentiment polarity: **the garden** & **the _cubiculum_** with a positive sentiment polarity and **the _fauces_** with a negative sentiment polarity. Each of the locations have only one wall inscription so a proper generalization or a pattern cannot be drawn based on these but they might still tell us something about the writers of the specific wall inscriptions. 
+
+The gardens of private Roman houses were partially or completely hidden from the public and they functioned as a sort of private relaxation place for the family. (Ormerod 2007) This may have also been the case at Casa delle nozze d'argento’s garden (marked as “05” in the layout) because it is clearly fenced and there is only one entrance from inside the house. Thus, fewer people have had access there, which can tell something about the author of the garden's wall inscription, interpreted as positive. As the garden is placed in the more private area of the house, the writer could be one of the family members, but the content of the wall writing in question says otherwise. The wall inscription found in the garden is CIL IV 4219 "_Albuci bene nos accipis_" (In English: "_Albucius, you received us well_"). This does not seem like something an inhabitant of the house would write and thus the writer is most likely an acquaintance, a client or a friend of the family.
+
+Another location with a completely positive sentiment polarity is "_Room x Southern wall_" (marked as “x” in the layout), which is identified as a _cubiculum_ room. (Ormerod 2007) Cubiculum rooms have generally been considered to be sleeping quarters in a Roman house, but they also had many different functions and they could also be used to receive friends or to take care of other private matters. (Nissinen 2008) Casa delle nozze d'argento’s _cubiculum x_ is in the southernmost part of the house behind the _peristyle_, farthest from the entrance and to get there you have to go through the entire building. This gives me the impression that the room has been used more privately. Only one wall inscription CIL IV has also been found in the room CIL 4215 “_Deli vale_” and has been interpreted as a greeting addressed to a person named Delos. Because there is only one wall inscription found in the _cubiculum_ it suggests that the room was not visited by as many people as other parts of the Casa delle nozze d'argento. The private nature of the _cubiculum_ can indicate that the writer of the wall inscription could be either a family member or a close friend of the family.
+
+A completely negative location in terms of sentiment polarity is Casa delle nozze d'argento’s _fauces_ corridor ("_Corridor p Western wall_"). There is also only one wall inscription CIL IV 4158 "_Pyris fellas_" i.e. "_Pyris, you suck cock_". The corridor’s function has been to connect different parts of the house. (Ormerod 2007) In the case of Casa delle nozze d'argento, the _fauces_ connects the _atrium d_ to the _peristyle r_. Since the _fauces_ corridor has most probably had a good line of sight from both the _atrium_ and the _peristyle_ , I believe it has not been possible to scribble freely or at least completely secretly wall writings there. This may partly explain why only one wall inscription has been found there. Ormerod (2007) sees the _atrium_ as an open space in the Roman house that could be visited by anyone. Thus, there are multiple possibilities for the identity of the writer of the wall inscription in the _fauces_. The residents of the house cannot be ruled out either: Vanhala (2019) interprets the invectives found inside of private houses as part of the mutual slander of the residents. 
+
+In addition to the above-mentioned sentimentally polarized locations, there are clearly visible concentrations of wall inscriptions in Casa delle nozze d'argento. The most popular place for writing wall inscriptions in general seems to have been the _peristyle_ courtyard of the house and its surroundings, where 30 of the 51 wall inscriptions used in this project have been located. This is 58.8% of the entire data. Another clear concentration of wall inscriptions is the _exedra_ ("_Room y_") in the southern part of the building. There are 12 wall inscriptions, which is 23.5% of the material. 
+
+
+### **<div align="center">The locations of the wall inscriptions:</div>**
+
+<div align="center"><img src="https://github.com/lisja/LDA-H305/assets/93824007/d0abaae6-dffa-45c6-914f-ce6b77199e5a"></div>
+
+
+Most of the wall inscriptions in the dataset are located in the _peristyle_ of Casa delle Nozze d'Argento, a covered porch consisting of rows of columns, and it typically surrounds a garden or central courtyard. (Simelius 2011) The Casa delle Nozze d'Argento’s _peristyle_ is the rectangular area in the middle of the house marked in the layout above with the letter **“r”**. 
+
+Another concentration of wall inscriptions is the _exedra_ located in the southern part of the house, which is marked on the floor plan with the letter **"y"**. An _exedra_ is an interior space or alcove that is closed on three sides but opens completely on the fourth side, most often into the _peristyle_. It was used, for example, to entertain guests and as a space for conversation. (Castren & Andrews 2008). 
+
+I don't consider it a coincidence that most of the graffiti in the Casa delle nozze d'argento are located in these two places, because both of them have had a social function in entertaining guests and therefore many people have spent time there. 
+
+
+The open nature of Roman private houses and the large number of people living and visiting them may explain why the wall inscriptions found inside the Casa delle nozze d'argento are so abundant. Their authors were probably either residents of the house (Vanhala 2019) or invited guests who spent time in the central part of the house enjoying the garden surrounded by columns. This seems a bit contradictory to our modern idea that graffiti or wall inscriptions are done by outsiders often to the outer parts of the buildings. Considering this, I find it especially interesting and quite funny that someone wrote “Lucio Albucio fellatori” (“To Lucius Albucius cocksucker”) inside Lucius Albucius Celsus’ own house. This makes me ponder the identity of the writer: could it be an unhappy slave or a client that was not pleased with their patron? 
 
 # Problems, biases & alternative solutions
 
@@ -128,9 +168,19 @@ My goal was to make this project and its process as open as possible. This is wh
 
 # References
 
+Castren, P., & Andrews, J. (Eds.) (2008). Domus Pompeiana: talo Pompejissa : näyttelykirja. Otava
+
 Lohmann, P. (2018) _Graffiti als Interaktionsform: Geritzte Inschriften in den Wohnhäusern Pompejis_, Berlin, Boston: De Gruyter, 2018. https://doi.org/10.1515/9783110574289
 
+Nissinen, L. (2008). Cubicula diurna, nocturna: cubiculum-makuutila latinankielisessä kirjallisuudessa. [Pro gradu -työ / MA thesis, University of Helsinki].
+
+Ormerod, W. J. (2007). Modesty and excess: a comparative analysis of pompeian houses and their relationship to romanitas and luxuria (Master's thesis).
+
 Rose, A. (2018) _Database for The Scratched Voices Begging to be Heard: The Graffiti of Pompeii and Today._ Tempe, AZ: Barrett, the Honors College. 2018 ( tDAR id: 445837) ; https://doi.org/10.6067/XCV8TH8QJ5 
+
+Simelius, S. (2011). Pylväskäytävien suojassa: Pompejilainen peristyylipuutarha sosioekonomisen edustamisen muotona. [Master's thesis, University of Helsinki]. Helsingin yliopisto verkkojulkaisut e-thesis. https://helda.helsinki.fi/items/074ae8f5-c2ca-4e26-9c8c-4f0f6aaff1ad
+
+Simelius, S. (2018). Pompeian peristyle gardens as a means of socioeconomic representation. Helsingin yliopisto.
 
 Sprugnoli, Rachele; Passarotti, Marco; Corbetta, Daniela and Peverelli, Andrea. (2020). _LatinAffectus_, ILC-CNR for CLARIN-IT repository hosted at Institute for Computational Linguistics "A. Zampolli", National Research Council, in Pisa. http://hdl.handle.net/20.500.11752/OPEN-527
 
@@ -140,3 +190,4 @@ Sprugnoli, R., Mambrini, F., Passarotti, M. C., & Moretti, G. (2023). _The Senti
 
 Vanhala, J. (2019). _Imanis metula es : herjaukset Pompejin seinäkirjoituksissa._ [Master’s thesis, University of Turku]
 
+Wallace-Hadrill, A. (1994). Houses and Society in Pompeii and Herculaneum. Princeton University Press. https://doi.org/10.2307/j.ctv289dw2n
