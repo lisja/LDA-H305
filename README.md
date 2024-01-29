@@ -59,6 +59,8 @@ I wrote the Python code to do the sentiment analysis on the dataset. The code an
  
 I wanted to visualize the results so I used _Palladio_ (https://hdlab.stanford.edu/palladio/) to create some graphs that can be seen below in the **Results and analysis** section. I used _OpenRefine_ (https://openrefine.org/) to clean the dataset a bit to delete empty rows that I had added to the dataset to make it more reader friendly. I also converted the dataset to .csv file because that is necessary for Palladio to work. I also made some donut graphs (using https://graphmaker.imageonline.co/donutchart.php) to visualize the distribution of the sentiment which can also be seen below. 
 
+
+
 # Results and analysis
 
 The results of the sentiment analysis shows that it can indeed be used in the context of the ancient wall inscriptions. However, it does require quite a lot of effort because there is still a lot of work to be done to get the methods and tools for this kind of research to work. The only proper sentiment lexicon at this time is _LatinAffectus_ that contains a bit over 6 000 Latin adjectives and nouns. However, it does not contain any verbs and the 6 000 words it has, ended up not being enough and thus I had to add some myself. These added words can be seen below. 
@@ -141,6 +143,7 @@ A completely negative location in terms of sentiment polarity is Casa delle nozz
 
 In addition to the above-mentioned sentimentally polarized locations, there are clearly visible concentrations of wall inscriptions in Casa delle nozze d'argento. The most popular place for writing wall inscriptions in general seems to have been the _peristyle_ courtyard of the house and its surroundings, where 30 of the 51 wall inscriptions used in this project have been located. This is 58.8% of the entire data. Another clear concentration of wall inscriptions is the _exedra_ ("_Room y_") in the southern part of the building. There are 12 wall inscriptions, which is 23.5% of the material. 
 
+&nbsp;
 
 ### **<div align="center">The locations of the wall inscriptions:</div>**
 
@@ -155,6 +158,12 @@ I don't consider it a coincidence that most of the graffiti in the Casa delle no
 
 
 The open nature of Roman private houses and the large number of people living and visiting them may explain why the wall inscriptions found inside the Casa delle nozze d'argento are so abundant. Their authors were probably either residents of the house (Vanhala 2019) or invited guests who spent time in the central part of the house enjoying the garden surrounded by columns. This seems a bit contradictory to our modern idea that graffiti or wall inscriptions are done by outsiders often to the outer parts of the buildings. Considering this, I find it especially interesting and quite funny that someone wrote “Lucio Albucio fellatori” (“To Lucius Albucius cocksucker”) inside Lucius Albucius Celsus’ own house. This makes me ponder the identity of the writer: could it be an unhappy slave or a client that was not pleased with their patron? 
+
+
+### **<div align="center">The final dataset with the sentiment analysis results</div>**
+
+<div align="center"><img src="https://github.com/lisja/LDA-H305/assets/93824007/6c44dc05-356f-4614-8bf6-405488fe3d59"></div>
+
 
 # Problems, biases & alternative solutions
 
